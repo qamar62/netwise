@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { forwardRef } from 'react'
 import { Card } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
@@ -40,8 +41,8 @@ export const DocumentPreview = forwardRef<HTMLDivElement, DocumentPreviewProps>(
           <div className="mb-8 flex items-start justify-between">
             <div>
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#1e3a5f]">
-                  <span className="text-xl font-bold text-white">N</span>
+                <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-white">
+                  <Image src="/logo.png" alt="Netwise logo" width={48} height={48} className="h-full w-full object-contain" />
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold text-[#1e3a5f]">{COMPANY_INFO.name}</h1>
